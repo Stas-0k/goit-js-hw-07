@@ -12,10 +12,6 @@ galleryContainer.innerHTML = galleryItems
   })
   .join("");
 
-let gallerySimple = new SimpleLightbox('.gallery__item')
-gallerySimple.on('show.simplelightbox', function () { 
-  gallerySimple.on('captionData.simplelightbox', function ()   
-   console.log(galleryItems.description))
-  
-})
+let gallerySimple = new SimpleLightbox('.gallery__item', { captionsData: "alt", captionDelay: 250 })
+
 
